@@ -1,23 +1,17 @@
-const stars = document.getElementById("stars");
+const boton=document.getElementById("entrar");
 
-for(let i = 0; i < 250; i++){
+boton.addEventListener("click",()=>{
 
-    const star = document.createElement("div");
+    document.body.style.transition="1s";
 
-    star.className = "star";
+    document.body.style.opacity="0";
 
-    star.style.left = Math.random()*100 + "%";
+    setTimeout(()=>{
 
-    star.style.top = Math.random()*100 + "%";
+        alert("Bienvenido a Nuestro Universo ❤️");
 
-    star.style.animationDelay = Math.random()*3 + "s";
+        document.body.style.opacity="1";
 
-    stars.appendChild(star);
-
-}
-
-document.getElementById("entrar").addEventListener("click",()=>{
-
-    alert("Bienvenido a Nuestro Universo 🩷🌌");
+    },1000);
 
 });
