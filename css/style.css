@@ -205,3 +205,29 @@ button:hover{
     }
 
 }
+
+<main class="hero">
+
+    <div class="glass">
+
+        <p class="mini">
+            ✨ Una historia escrita entre estrellas ✨
+        </p>
+
+        <h1>Nuestro Universo</h1>
+
+        <h2>David 🩷 Vanessa</h2>
+
+        <p class="frase">
+            Hay personas que llegan por casualidad...
+            <br><br>
+            y otras que llegan para convertirse en hogar.
+        </p>
+
+        <button id="entrar">
+            🩷 Comenzar nuestro viaje
+        </button>
+
+    </div>
+
+</main>
