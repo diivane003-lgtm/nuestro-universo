@@ -1,4 +1,5 @@
 .corazon{
+    corazon.innerHTML="🩷";
 
     position:absolute;
 

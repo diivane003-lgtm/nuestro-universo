@@ -247,22 +247,34 @@ transform:scale(1.05);
 
     position:absolute;
 
-    color:#ff7eb9;
+    color:#ffb6d9;
 
-    font-size:25px;
+    font-size:22px;
+
+    filter:drop-shadow(0 0 8px #ff8fc7);
 
     animation:flotar 5s linear forwards;
 
     pointer-events:none;
 
+    z-index:10;
+
 }
+
 
 
 @keyframes flotar{
 
     0%{
 
-        transform:translateY(0) scale(1);
+        transform:translateY(0) scale(.8) rotate(0deg);
+
+        opacity:0;
+
+    }
+
+
+    20%{
 
         opacity:1;
 
@@ -271,10 +283,11 @@ transform:scale(1.05);
 
     100%{
 
-        transform:translateY(-700px) scale(1.8);
+        transform:translateY(-700px) scale(1.5) rotate(25deg);
 
         opacity:0;
 
     }
 
 }
+
