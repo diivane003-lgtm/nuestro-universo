@@ -1,9 +1,16 @@
-function abrirCarta(){
+function abrirSobre(){
 
-    document.querySelector(".hero").style.display="none";
+document.getElementById("inicio").style.display="none";
 
-    document
-    .getElementById("carta")
-    .classList.add("activa");
+document.getElementById("sobreContainer").style.display="block";
+
+}
+
+
+
+function mostrarCarta(){
+
+document.querySelector(".sobre")
+.classList.add("abierto");
 
 }
