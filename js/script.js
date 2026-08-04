@@ -17,6 +17,7 @@
         <div class="emoji">
             🎧
         </div>
+        <div class="moon"></div>
 
         <button id="comenzar">
             Estoy listo ❤️

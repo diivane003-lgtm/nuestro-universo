@@ -259,3 +259,72 @@ button:hover{
     </div>
 
 </div>
+
+/* ===== LUNA ===== */
+
+.moon{
+
+    position:fixed;
+
+    top:60px;
+
+    right:80px;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle at 30% 30%,
+    #ffffff,
+    #ececec 45%,
+    #d6d6d6 70%,
+    #bcbcbc);
+
+    box-shadow:
+        0 0 60px rgba(255,255,255,.45),
+        0 0 120px rgba(170,210,255,.25);
+
+    z-index:2;
+
+    animation:floatMoon 8s ease-in-out infinite;
+
+}
+
+@keyframes floatMoon{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .moon{
+
+        width:130px;
+        height:130px;
+
+        top:35px;
+        right:25px;
+
+    }
+
+}
