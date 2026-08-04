@@ -1,137 +1,66 @@
-/* ===== RESET ===== */
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-/* ===== BODY ===== */
 
 body{
 
-    font-family:'Poppins',sans-serif;
-
     height:100vh;
-
     overflow:hidden;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
-    position:relative;
+    font-family:'Poppins',sans-serif;
 
-    background:linear-gradient(
+    background:
+    linear-gradient(
         180deg,
-        #02040f 0%,
-        #08142f 45%,
-        #132b55 100%
+        #020024,
+        #090979,
+        #ff758c
     );
 
     color:white;
 
 }
 
-/* ===== FONDO ===== */
-
-#stars{
-
-    position:fixed;
-
-    inset:0;
-
-    overflow:hidden;
-
-    z-index:1;
-
-}
-
-/* ===== CONTENIDO ===== */
 
 .hero{
 
-    position:relative;
-
-    z-index:10;
-
-    width:90%;
-
-    max-width:700px;
-
     text-align:center;
 
-    animation:fadeUp 1.5s ease;
+    animation:showHero 1.8s ease;
 
 }
 
-/* ===== TEXTO ===== */
-
-.mini{
-
-    color:#ffc7e2;
-
-    letter-spacing:4px;
-
-    text-transform:uppercase;
-
-    font-size:13px;
-
-    margin-bottom:20px;
-
-}
 
 h1{
 
-    font-size:72px;
-
-    font-weight:700;
-
-    line-height:1.1;
-
-    margin-bottom:10px;
-
-    text-shadow:
-        0 0 15px rgba(255,255,255,.35),
-        0 0 40px rgba(120,170,255,.30);
+    font-size:45px;
 
 }
 
-h2{
 
-    color:#ffd5eb;
+p{
 
-    font-weight:400;
-
-    margin-bottom:35px;
+    margin:20px;
+    font-size:18px;
 
 }
 
-.frase{
-
-    font-size:19px;
-
-    line-height:34px;
-
-    color:#ececec;
-
-}
-
-/* ===== BOTÓN ===== */
 
 button{
 
-    margin-top:45px;
-
-    padding:18px 50px;
+    padding:15px 35px;
 
     border:none;
+    border-radius:30px;
 
-    border-radius:999px;
-
-    background:rgba(255,255,255,.12);
+    background:#ff4d88;
 
     color:white;
 
@@ -139,138 +68,121 @@ button{
 
     cursor:pointer;
 
-    backdrop-filter:blur(12px);
-
-    transition:.35s;
-
-    box-shadow:0 10px 35px rgba(0,0,0,.25);
+    animation:pulse 2.5s infinite;
 
 }
 
-button:hover{
 
-    transform:translateY(-4px);
+.carta{
 
-    background:rgba(255,255,255,.18);
+    position:absolute;
 
-    box-shadow:
-        0 15px 40px rgba(255,255,255,.15);
+    width:100%;
+    height:100%;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
 
 }
 
-/* ===== ANIMACIÓN ===== */
 
-@keyframes fadeUp{
+.papel{
 
-    from{
+    width:85%;
+    max-width:500px;
 
-        opacity:0;
+    background:#fff8ef;
 
-        transform:translateY(40px);
+    color:#333;
 
-    }
+    padding:35px;
+
+    border-radius:20px;
+
+    transform:scale(0);
+
+    animation:abrir 1s forwards;
+
+}
+
+
+.carta.activa{
+
+    display:flex;
+
+}
+
+
+@keyframes abrir{
 
     to{
 
-        opacity:1;
-
-        transform:translateY(0);
+        transform:scale(1);
 
     }
 
 }
 
-/* ===== RESPONSIVE ===== */
 
-@media(max-width:700px){
 
-    h1{
+@keyframes showHero{
 
-        font-size:48px;
+from{
 
-    }
-
-    .frase{
-
-        font-size:17px;
-
-        line-height:30px;
-
-    }
-
-    button{
-
-        width:100%;
-
-    }
+opacity:0;
+transform:translateY(40px);
 
 }
 
-/* ===== LUNA ===== */
+to{
 
-.moon{
-
-    position:fixed;
-
-    top: 60px;
-
-    right: 80px;
-
-    width: 220px;
-
-    height: 220px;
-
-    border-radius: 50%;
-
-    background:
-    radial-gradient(circle at 30% 30%,
-    #ffffff,
-    #ececec 45%,
-    #d6d6d6 70%,
-    #bcbcbc);
-
-    box-shadow:
-        0 0 60px rgba(255,255,255,.45),
-        0 0 120px rgba(170,210,255,.25);
-
-    z-index:2;
-
-    animation:floatMoon 8s ease-in-out infinite;
+opacity:1;
+transform:translateY(0);
 
 }
 
-@keyframes floatMoon{
+}
 
-    0%{
 
-        transform:translateY(0px);
 
-    }
+@keyframes pulse{
 
-    50%{
+50%{
 
-        transform:translateY(-10px);
-
-    }
-
-    100%{
-
-        transform:translateY(0px);
-
-    }
+transform:scale(1.05);
 
 }
 
-@media(max-width:768px){
+}
 
-    .moon{
 
-        width:130px;
-        height:130px;
 
-        top:35px;
-        right:25px;
+.star{
 
-    }
+position:absolute;
+
+width:3px;
+height:3px;
+
+background:white;
+
+border-radius:50%;
+
+animation:twinkle 3s infinite;
+
+}
+
+
+
+@keyframes twinkle{
+
+50%{
+
+opacity:1;
+transform:scale(1.5);
+
+}
 
 }
