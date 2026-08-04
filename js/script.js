@@ -1,36 +1,78 @@
-.corazon{
-    corazon.innerHTML="🩷";
+function mostrarCapsula(){
 
-    position:absolute;
+document.getElementById("inicio").style.display="none";
 
-    color:#ff7eb9;
-
-    font-size:25px;
-
-    animation:flotar 5s linear forwards;
-
-    pointer-events:none;
+document.getElementById("espacio").style.display="block";
 
 }
 
 
-@keyframes flotar{
+function abrirCapsula(){
 
-    0%{
-
-        transform:translateY(0) scale(1);
-
-        opacity:1;
-
-    }
+document.querySelector(".capsula")
+.classList.add("abierta");
 
 
-    100%{
+let musica = document.getElementById("musica");
 
-        transform:translateY(-700px) scale(1.8);
+musica.play();
 
-        opacity:0;
 
-    }
+setTimeout(()=>{
+
+
+document.querySelector(".capsula")
+.style.display="none";
+
+
+document.getElementById("carta")
+.style.display="block";
+
+
+crearCorazones();
+
+
+},1200);
+
+
+}
+
+
+
+function crearCorazones(){
+
+
+setInterval(()=>{
+
+
+let corazon=document.createElement("div");
+
+
+corazon.className="corazon";
+
+
+corazon.innerHTML="🩷";
+
+
+corazon.style.left=Math.random()*100+"vw";
+
+
+corazon.style.bottom="0";
+
+
+document.body.appendChild(corazon);
+
+
+
+setTimeout(()=>{
+
+corazon.remove();
+
+},5000);
+
+
+
+},400);
+
 
 }
