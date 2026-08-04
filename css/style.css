@@ -206,75 +206,21 @@ button:hover{
 
 }
 
-<main class="hero">
-
-    <div class="glass">
-
-        <p class="mini">
-            ✨ Una historia escrita entre estrellas ✨
-        </p>
-
-        <h1>Nuestro Universo</h1>
-
-        <h2>David 🩷 Vanessa</h2>
-
-        <p class="frase">
-            Hay personas que llegan por casualidad...
-            <br><br>
-            y otras que llegan para convertirse en hogar.
-        </p>
-
-        <button id="entrar">
-            🩷 Comenzar nuestro viaje
-        </button>
-
-    </div>
-
-</main>
-
-<div id="intro">
-
-    <div class="intro-box">
-
-        <h1>Hola, mi flako hemoso 🩷🧃</h1>
-
-        <p>
-            Antes de comenzar...
-        </p>
-
-        <p>
-            Quiero que te pongas tus audífonos,
-            porque este pequeño universo
-            lo hice con todo mi amor para ti.
-        </p>
-
-        <div class="emoji">
-            🎧
-        </div>
-
-        <button id="comenzar">
-            Estoy listo ❤️
-        </button>
-
-    </div>
-
-</div>
-
 /* ===== LUNA ===== */
 
 .moon{
 
     position:fixed;
 
-    top:60px;
+    top: 60px;
 
-    right:80px;
+    right: 80px;
 
-    width:220px;
+    width: 220px;
 
-    height:220px;
+    height: 220px;
 
-    border-radius:50%;
+    border-radius: 50%;
 
     background:
     radial-gradient(circle at 30% 30%,
