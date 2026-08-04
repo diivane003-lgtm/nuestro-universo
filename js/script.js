@@ -1,17 +1,27 @@
-const boton=document.getElementById("entrar");
+<div id="intro">
 
-boton.addEventListener("click",()=>{
+    <div class="intro-box">
 
-    document.body.style.transition="1s";
+        <h1>Hola, mi flako hemoso 🩷🧃</h1>
 
-    document.body.style.opacity="0";
+        <p>
+            Antes de comenzar...
+        </p>
 
-    setTimeout(()=>{
+        <p>
+            Quiero que te pongas tus audífonos,
+            porque este pequeño universo
+            lo hice con todo mi amor para ti.
+        </p>
 
-        alert("Bienvenido a Nuestro Universo ❤️");
+        <div class="emoji">
+            🎧
+        </div>
 
-        document.body.style.opacity="1";
+        <button id="comenzar">
+            Estoy listo ❤️
+        </button>
 
-    },1000);
+    </div>
 
-});
+</div>
